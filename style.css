@@ -1,0 +1,133 @@
+.same{
+    width: 50%;
+    margin: 0px auto;
+    
+}
+.goToSignIn{
+    width: 50%;
+    margin: 0px auto;
+}
+.alreadyAccount{
+    display: none;
+    
+}
+.wrongInfo{
+    display: none;
+    
+}
+.suh{
+    margin: 15% auto 2% auto;
+    
+}
+.but{
+    margin: 1% auto 1% auto;
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:#6cf;
+ }
+ .grid{
+     margin: 2% 0% 0% 0%;
+ }
+.cardstyling{
+    margin: 0% 0% 2% 0%;
+} 
+.validate{
+    max-height: 300px;
+    max-width: 300px;
+    overflow: scroll;
+}
+.activeUser{
+    display: none;
+}
+#postad{
+    display: none;
+}
+#greetUser{
+    display: none;
+}
+#search{
+     
+    height: 70%;
+}
+#searchBtn{
+    display: none;
+}
+.userProfile{
+    display: none;
+}
+.userAds{
+    display: none;
+}
+.category{
+    color: gray;
+}
+.favourite{
+    display: none;
+}
+.text-messages{
+    color: gray;
+}
+.btmain{
+    width: 100%;
+    height: 40vw;
+    background-color: green;
+}
+
+.a{
+background-color: green;
+
+padding-top: 5vw;
+width: 50%;
+list-style: none;
+text-align: center;
+padding-left: 5vw;
+margin-left: 20vw;
+margin-top: 5vw;
+
+}
+.b{
+   
+    background-color: white;
+}
+
+@media (min-width:570px) and (max-width:1199px) {
+    .btmain{
+        width: 100%;
+        height: 60vw;
+    }
+
+    .a{
+        margin-top: 10vw;
+    }
+}
+
+@media (max-width:570px) {
+    .btnmain{
+        height : 80vw;
+    }
+
+    .a{
+        margin-top: 20vw;
+    }
+}
+
+.btnQty{
+background-color: orangered;
+padding-left: 1vw;
+padding-right: 1vw;
+padding-top: 0.5vw;
+padding-bottom: 0.6vw;
+
+}
+
+.btnCart{
+    background-color: green;
+padding-left: 1vw;
+padding-right: 1vw;
+padding-top: 0.5vw;
+padding-bottom: 0.6vw;
+}
