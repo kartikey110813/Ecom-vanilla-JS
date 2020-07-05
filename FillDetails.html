@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>Fill Your Delivery Details</title>
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color: orangered; ">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ecommerce Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+         
+          <li class="userFeedback"  id="Feedback">
+            <a class="nav-link" href="#">Feedback / Complaints</a>
+          </li>
+
+          <li class="customerSupport"  id="yourSupport">
+            <a class="nav-link" href="#">Customer Support</a>
+          </li>
+    
+          
+          <li class="activeUser nav-item" id="activeUser">
+            <a class="nav-link" href="index.html" onclick="signOut()">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <h2 style="margin-top: 20vw; margin-left: 32vw;">Fill your Delivery Details Below</h2>
+
+    <form style="margin: 2vw;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input  required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your Details with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Mobile Number</label>
+          <input type="number" required class="form-control" id="exampleInputPassword1" placeholder = "Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Complete Address</label>
+            <textarea class="form-control" required id="exampleFormControlTextarea1" rows="3" placeholder="Your Complete Address For Delivery"></textarea>
+        </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">State</label>
+            <input type="text" class="form-control" required id="exampleInputPassword1" placeholder = "Your State">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">City</label>
+            <input type="text" class="form-control"  required id="exampleInputPassword1" placeholder = "Your City">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Pincode</label>
+            <input type="text" class="form-control" required id="exampleInputPassword1" placeholder = "Pincode">
+          </div>
+
+
+
+
+        <button type="submit" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;">Place Order (COD)</button>
+        <button type="submit" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;">Place Order (UPI)</button>
+
+    </form>
+
+
+    <footer class="grid py-5 " style="background-color: black;">
+        <div class="container">
+            <div class="container">
+                <address style="color:#f0f5f5;font-family:Times New Roman;Text-Align:center">
+                        Website Owner : Ecommerce<sup>©</sup><br>
+                        Contact Us      : kartikey110813@gmail.com<br>
+                        Instagram      : <a href="#">Find Us On Instagram</a><br>
+                        Facebook       : <a href="#">Find Us On Facebook</a><br>
+                        Youtube       : <a href="#">Find Us On Youtube</a><br>
+                        </address>
+        </div>
+        <!-- /.container -->
+    </footer>
+     
+    <!-- main -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
+    
+    <script src="/__/firebase/7.15.3/firebase-auth.js"></script>
+    
+    <script>
+      // Initialize Firebase
+      var firebaseConfig = {
+        apiKey: "AIzaSyDyQimCA-co4qkAbwcZfkJE2Kx2FDUDXWE",
+        authDomain: "transera-a3e20.firebaseapp.com",
+        databaseURL: "https://transera-a3e20.firebaseio.com",
+        projectId: "transera-a3e20",
+        storageBucket: "transera-a3e20.appspot.com",
+        messagingSenderId: "360313496827",
+        appId: "1:360313496827:web:38b99b6d1b288ca7217c5e",
+        measurementId: "G-YHXQQRB3CH"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics(); 
+    </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+       
+        <!-- <script src="User Profile.js"></script> -->
+       
+      
+        <script src="fillDetails.js"></script>
+    
+    
+
+</body>
+</html>

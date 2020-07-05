@@ -121,7 +121,7 @@ padding-left: 1vw;
 padding-right: 1vw;
 padding-top: 0.5vw;
 padding-bottom: 0.6vw;
-
+cursor: pointer;
 }
 
 .btnCart{
@@ -130,4 +130,17 @@ padding-left: 1vw;
 padding-right: 1vw;
 padding-top: 0.5vw;
 padding-bottom: 0.6vw;
+cursor: pointer;
 }
+
+.MyProceed{
+    margin-top: 10vw;
+    align-items: center ;
+    background-color: orange;
+    margin-left: 41vw;
+    padding: 1vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 7%;
+}
+

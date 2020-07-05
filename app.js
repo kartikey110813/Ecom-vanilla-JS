@@ -1,3 +1,5 @@
+var quantity;
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('./service-worker.js')
@@ -54,24 +56,24 @@ if ('serviceWorker' in navigator) {
       </div>
     `
     }
-    else if(quantity === undefined){
-      return`
-      <div class="cardstyling col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-        <small>By ${data.displayName}</small>
-        <img class="validate card-img-top" src=${data.url} /> 
-        <div class="card-body">
-        <h3 class="card-title">${data.title}</h3>
-        <h4 class="category">${data.category}</h4>
-        <p class="validate card-text">${data.description}</p>
-        <h5>Rs. ${data.price}</h5>
-        <button type="button" class="btnQty" onclick="SelectQty">Quantity</button>
-        <button type="button" class="btnCart" onclick="quantityFirst()">Add To Cart</button>
-          </div>
-        </div>
-      </div>
-    `
-    }
+    // else if(quantity == undefined){
+    //   return`
+    //   <div class="cardstyling col-lg-4 col-sm-6 portfolio-item">
+    //     <div class="card h-100">
+    //     <small>By ${data.displayName}</small>
+    //     <img class="validate card-img-top" src=${data.url} /> 
+    //     <div class="card-body">
+    //     <h3 class="card-title">${data.title}</h3>
+    //     <h4 class="category">${data.category}</h4>
+    //     <p class="validate card-text">${data.description}</p>
+    //     <h5>Rs. ${data.price}</h5>
+    //     <button type="button" class="btnQty" onclick="SelectQty()">Quantity</button>
+    //     <button type="button" class="btnCart" onclick="quantityFirst()">Add To Cart</button>
+    //       </div>
+    //     </div>
+    //   </div>
+    // `
+    // }
     else{
    return`
     <div class="cardstyling col-lg-4 col-sm-6 portfolio-item">
@@ -148,7 +150,7 @@ if ('serviceWorker' in navigator) {
       }
     }
   }
-  var quantity;
+
   //Favourites Function
   function addToFavourites(button){
     
@@ -159,7 +161,14 @@ if ('serviceWorker' in navigator) {
     var title=button.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
     var url=button.parentElement.parentElement.firstElementChild.nextElementSibling.src;
 
+
+    if(quantity == undefined){
+      alert("Please Select the Quantity");
+    }
+       else{
     alert("Your Product has been added to Your shopping cart with " + quantity + " items");
+    
+       }    
     // console.log(`category :${category}` + `\n`
     // +`displayName :${displayName}` + `\n`
     // + `description :${description}` + `\n`
