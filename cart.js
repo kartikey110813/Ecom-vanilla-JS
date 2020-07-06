@@ -3,6 +3,8 @@ if ('serviceWorker' in navigator) {
              .register('./service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
+
+
   
   function signOut(){
       firebase.auth().signOut().then(function() {
@@ -142,6 +144,18 @@ if ('serviceWorker' in navigator) {
       }
       })
     }
+
+    function clickForDetails() {
+      if( database.ref('cart/') == null)  {
+             alert("Your cart Is empty ! Please Add some Items to the cart");
+}
+
+      else {
+                    window.location.href = "FillDetails.html"
+      }
+    }
+
+    
   
     
     
