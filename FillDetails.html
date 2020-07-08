@@ -27,6 +27,10 @@
             <a class="nav-link" href="#">Customer Support</a>
           </li>
     
+          <li class="backHome"  id="backToHome">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+    
           
           <li class="activeUser nav-item" id="activeUser">
             <a class="nav-link" href="index.html" onclick="signOut()">Sign Out</a>
@@ -39,47 +43,47 @@
 
     <h2 style="margin-top: 20vw; margin-left: 32vw;">Fill your Delivery Details Below</h2>
 
-    <form style="margin: 2vw;">
+    <form style="margin: 2vw;" id="DetailsForm">
         <div class="form-group">
-          <label for="exampleInputEmail1">Name</label>
-          <input  required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
+          <label for="name">Name</label>
+          <input name="name" required type="text" class="form-control" id="nm1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
           <small id="emailHelp" class="form-text text-muted">We'll never share your Details with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Mobile Number</label>
-          <input type="number" required class="form-control" id="exampleInputPassword1" placeholder = "Phone Number">
+          <label for="mobile">Mobile Number</label>
+          <input type="number" name="mobile" required class="form-control" id="ph1" placeholder = "Phone Number">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Complete Address</label>
-            <textarea class="form-control" required id="exampleFormControlTextarea1" rows="3" placeholder="Your Complete Address For Delivery"></textarea>
+            <label for="address">Complete Address</label>
+            <textarea name="address" class="form-control" required id="ad1" rows="3" placeholder="Your Complete Address For Delivery"></textarea>
         </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">State</label>
-            <input type="text" class="form-control" required id="exampleInputPassword1" placeholder = "Your State">
+            <label for="state">State</label>
+            <input name="state" type="text" class="form-control" required id="st1" placeholder = "Your State">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">City</label>
-            <input type="text" class="form-control"  required id="exampleInputPassword1" placeholder = "Your City">
+            <label for="city">City</label>
+            <input name="city" type="text" class="form-control"  required id="city1" placeholder = "Your City">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Pincode</label>
-            <input type="text" class="form-control" required id="exampleInputPassword1" placeholder = "Pincode">
+            <label for="pincode">Pincode</label>
+            <input name="pincode" type="text" class="form-control" required id="pincode1" placeholder = "Pincode">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Total Amount</label>
-            <input type="text" class="form-control" required id="exampleInputPassword1" placeholder="">
+            <label for="amount">Total Amount</label>
+            <input name="amount" type="text" class="form-control" required id="amount1" placeholder="">
           </div>
 
 
 
 
-        <button type="submit" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;">Place Order (COD)</button>
-        <button type="submit" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;">Place Order (UPI)</button>
-
+      <button type="submit" id="cash" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;" onclick="cod()">Place Order (COD)</button>
+        <button type="submit" class="btn btn-primary" style="margin-left: 50vw; padding: 1vw; margin-top: 2vw; background-color: green; border: none;" onclick="upi()">Place Order (UPI)</button>
+        <div class="alert alert-success wrongInfo" id="submitOrderSuccessfull" role="alert" ></div>    
     </form>
 
 
