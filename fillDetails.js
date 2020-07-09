@@ -42,8 +42,9 @@ var myCity = myForm.city1.value;
 var myPincode = myForm.pincode1.value;
 
 
-        var Myorder = database.ref(`ORDERS/`).push();
-        Myorder.set({
+
+        var Myorder = database.ref('ORDERS/' + firebase.auth().currentUser.uid).push().set({
+        
             name: myname,
             mobileNumber: myMobile,
             Address : myAddress,
@@ -51,28 +52,19 @@ var myPincode = myForm.pincode1.value;
             City : myCity,
             Pincode : myPincode,
             PaymentMethod : "COD",
+            totalamount : TotalAmount ,
+        
+      
             
         })
 
-        .catch(console.error).then( 
-            ()=>{
-        
-        document.getElementById("submitOrderSuccessfull").style.display = "block";
-        document.getElementById("submitOrderSuccessfull").innerHTML = "Succesfully Posted";
-                                
-                }
-            ).then( 
-                ()=>{
-                    
-                    setTimeout(function(){
-                        var user = firebase.auth().currentUser;
-                        if(user !== null){
-                            window.location.href = "OrderPlaced.html";    
-                                        } 
-                                        }, 900);
-                                    })
+      
+
+         
+          window.location.href = "OrderPlaced.html";                         
 
 
        }
                     
+
                     

@@ -43,7 +43,7 @@
 
     <h2 style="margin-top: 20vw; margin-left: 32vw;">Fill your Delivery Details Below</h2>
 
-    <form style="margin: 2vw;" id="DetailsForm">
+    <form style="margin: 2vw;" id="DetailsForm" onsubmit="return false">
         <div class="form-group">
           <label for="name">Name</label>
           <input name="name" required type="text" class="form-control" id="nm1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
@@ -75,7 +75,7 @@
 
           <div class="form-group">
             <label for="amount">Total Amount</label>
-            <input name="amount" type="text" class="form-control" required id="amount1" placeholder="">
+            <input name="amount" type="text" class="form-control" required id="amount1" placeholder = TA readonly>
           </div>
 
 
